@@ -1,0 +1,45 @@
+/*-------------------------------------------
+about
+-------------------------------------------*/
+.about {
+    margin-top: 20px;
+  
+    &__hero {
+      background-image: url(../images/sozai3.jpg);
+      position: relative;
+      @include fixed-bg();
+    }
+  
+    &__content {
+      @include section-wrap();
+    }
+  
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+  
+    &__item {
+      width: 50%;
+      line-height: 2;
+      text-align: left;
+      padding: 2%;
+    }
+  }
+  
+  /*-------------------------------------------
+  SP
+  -------------------------------------------*/
+  @media screen and (max-width: 767px) {
+    .about {
+      &__list {
+        flex-direction: column;
+      }
+  
+      &__item {
+        width: 100%;
+      }
+    }
+  }

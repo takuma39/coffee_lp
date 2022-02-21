@@ -1,0 +1,116 @@
+/*// 
+// variable
+// ==========================================================================*/
+// breakpoint
+$break1: 320;
+$break2: 480;
+$break3: 600;
+$break4: 760;
+$break5: 960;
+$break6: 1280;
+$breakpoints: (
+  // br以上
+  "o-br1": "print, screen and (min-width: #{$break1 + 1}px)",
+  "o-br2": "print, screen and (min-width: #{$break2 + 1}px)",
+  "o-br3": "print, screen and (min-width: #{$break3 + 1}px)",
+  "o-br4": "print, screen and (min-width: #{$break4 + 1}px)",
+  "o-br5": "print, screen and (min-width: #{$break5 + 1}px)",
+  "o-br6": "print, screen and (min-width: #{$break6 + 1}px)",
+  // br以下
+  "u-br1": "print, screen and (max-width: #{$break1}px)",
+  "u-br2": "print, screen and (max-width: #{$break2}px)",
+  "u-br3": "print, screen and (max-width: #{$break3}px)",
+  "u-br4": "print, screen and (max-width: #{$break4}px)",
+  "u-br5": "print, screen and (max-width: #{$break5}px)",
+  "u-br6": "print, screen and (max-width: #{$break5}px)"
+) !default;
+@mixin mq($breakpoint) {
+  @media #{inspect(map-get($breakpoints, $breakpoint))} {
+    @content;
+  }
+}
+
+// ブレイクポイント見本
+.test {
+  // over
+  // $break1: 320;
+  @include mq(o-br1) {
+  }
+  // $break2: 480;
+  @include mq(o-br2) {
+  }
+  // $break3: 600;
+  @include mq(o-br3) {
+  }
+  // $break4: 760;
+  @include mq(o-br4) {
+  }
+  // $break5: 960;
+  @include mq(o-br5) {
+  }
+  // $break6: 1280;
+  @include mq(o-br6) {
+  }
+  // under
+  // $break6: 1280;
+  @include mq(u-br6) {
+  }
+  // $break5: 960;
+  @include mq(u-br5) {
+  }
+  // $break4: 760;
+  @include mq(u-br4) {
+  }
+  // $break3: 600;
+  @include mq(u-br3) {
+  }
+  // $break2: 480;
+  @include mq(u-br2) {
+  }
+  // $break1: 320;
+  @include mq(u-br1) {
+  }
+}
+
+// 非表示クラス
+.u-hidden {
+  display: none !important;
+}
+.u-hidden--ubr1 {
+  @include mq(u-br1) {
+    display: none !important;
+  }
+}
+.u-hidden--ubr2 {
+  @include mq(u-br2) {
+    display: none !important;
+  }
+}
+.u-hidden--ubr3 {
+  @include mq(u-br3) {
+    display: none !important;
+  }
+}
+.u-hidden--ubr4 {
+  @include mq(u-br4) {
+    display: none !important;
+  }
+}
+.u-hidden--ubr5 {
+  @include mq(u-br5) {
+    display: none !important;
+  }
+}
+
+// ie用
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+// PATH
+
+// COLOR
+$color1: #e03131;
+
