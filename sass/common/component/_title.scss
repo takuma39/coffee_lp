@@ -10,9 +10,7 @@
   @include text-neon--1;
 
   @media screen and (max-width: 767px) {
-    .site-title {
       top: 42%;
-    }
   }
 }
 
@@ -26,10 +24,8 @@
   @include text-neon--1;
 
   @media screen and (max-width: 767px) {
-    .sec-title {
       font-size: 2rem;
       top: 26%;
-    }
   }
 }
 
@@ -40,9 +36,7 @@
   margin-bottom: 70px;
 
   @media screen and (max-width: 767px) {
-    .item-title {
       font-size: 1.25rem;
       margin-bottom: 25px;
-    }
   }
 }

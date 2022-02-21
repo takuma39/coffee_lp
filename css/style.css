@@ -282,7 +282,7 @@ body {
   color: #fff;
   text-shadow: 0 0 5px #fff; }
   @media screen and (max-width: 767px) {
-    .site-title .site-title {
+    .site-title {
       top: 42%; } }
 
 .sec-title {
@@ -295,7 +295,7 @@ body {
   color: #fff;
   text-shadow: 0 0 5px #fff; }
   @media screen and (max-width: 767px) {
-    .sec-title .sec-title {
+    .sec-title {
       font-size: 2rem;
       top: 26%; } }
 
@@ -305,7 +305,7 @@ body {
   border-bottom: solid 6px #e03131;
   margin-bottom: 70px; }
   @media screen and (max-width: 767px) {
-    .item-title .item-title {
+    .item-title {
       font-size: 1.25rem;
       margin-bottom: 25px; } }
 
